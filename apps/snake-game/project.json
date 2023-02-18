@@ -1,0 +1,63 @@
+{
+  "name": "snake-game",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/snake-game",
+  "projectType": "application",
+  "targets": {
+    "build": {
+      "executor": "@nrwl/next:build",
+      "outputs": ["{options.outputPath}"],
+      "defaultConfiguration": "production",
+      "options": {
+        "root": "apps/snake-game",
+        "outputPath": "dist/apps/snake-game"
+      },
+      "configurations": {
+        "development": {
+          "outputPath": "apps/snake-game"
+        },
+        "production": {}
+      }
+    },
+    "serve": {
+      "executor": "@nrwl/next:server",
+      "defaultConfiguration": "development",
+      "options": {
+        "buildTarget": "snake-game:build",
+        "dev": true
+      },
+      "configurations": {
+        "development": {
+          "buildTarget": "snake-game:build:development",
+          "dev": true
+        },
+        "production": {
+          "buildTarget": "snake-game:build:production",
+          "dev": false
+        }
+      }
+    },
+    "export": {
+      "executor": "@nrwl/next:export",
+      "options": {
+        "buildTarget": "snake-game:build:production"
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/apps/snake-game"],
+      "options": {
+        "jestConfig": "apps/snake-game/jest.config.ts",
+        "passWithNoTests": true
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["apps/snake-game/**/*.{ts,tsx,js,jsx}"]
+      }
+    }
+  },
+  "tags": []
+}
