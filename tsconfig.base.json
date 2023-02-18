@@ -14,7 +14,9 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@canvas-games/canvas": ["libs/canvas/src/index.ts"]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }

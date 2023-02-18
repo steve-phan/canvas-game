@@ -1,94 +1,30 @@
+# Canvas Games with Next.js and NX
 
+Welcome to the Canvas Games project, a collection of fun and interactive games built with Next.js and NX! This project is designed to showcase the power and flexibility of the Next.js framework for building rich, interactive applications that run in the browser. By leveraging the power of NX as a monorepo, we can efficiently manage multiple games in a single codebase while sharing common code and resources across all of our projects.
 
-# CanvasGames
+## What is Next.js?
 
-This project was generated using [Nx](https://nx.dev).
+Next.js is a powerful, production-ready framework for building React applications. It offers a number of powerful features and benefits that make it a popular choice for building modern, dynamic web applications, including:
 
-<p style="text-align: center;"><img src="https://raw.githubusercontent.com/nrwl/nx/master/images/nx-logo.png" width="450"></p>
+- Server-side rendering for fast, SEO-friendly websites
+- Automatic code splitting for faster page loads
+- Built-in support for CSS modules and other modern web technologies
+- Powerful routing and data fetching capabilities
+- A rich ecosystem of plugins, tools, and community resources
 
-🔎 **Smart, Fast and Extensible Build System**
+## What is NX?
 
-## Adding capabilities to your workspace
+NX is a set of powerful tools and best practices for building modern applications with Angular, React, and other popular frameworks. It offers a number of powerful features and benefits that make it an ideal choice for managing complex, multi-project codebases, including:
 
-Nx supports many plugins which add capabilities for developing different types of applications and different tools.
+- A powerful CLI for generating and managing projects, libraries, and other code assets
+- A built-in test runner and code quality tools for ensuring that your code is reliable and maintainable
+- Powerful tools for managing dependencies and versioning across your projects
+- Support for a wide range of popular front-end frameworks and tools
 
-These capabilities include generating applications, libraries, etc as well as the devtools to test, and build projects as well.
+## What Can I Expect from This Project?
 
-Below are our core plugins:
-
-- [React](https://reactjs.org)
-  - `npm install --save-dev @nrwl/react`
-- Web (no framework frontends)
-  - `npm install --save-dev @nrwl/web`
-- [Angular](https://angular.io)
-  - `npm install --save-dev @nrwl/angular`
-- [Nest](https://nestjs.com)
-  - `npm install --save-dev @nrwl/nest`
-- [Express](https://expressjs.com)
-  - `npm install --save-dev @nrwl/express`
-- [Node](https://nodejs.org)
-  - `npm install --save-dev @nrwl/node`
-
-There are also many [community plugins](https://nx.dev/community) you could add.
-
-## Generate an application
-
-Run `nx g @nrwl/react:app my-app` to generate an application.
-
-> You can use any of the plugins above to generate applications as well.
-
-When using Nx, you can create multiple applications and libraries in the same workspace.
-
-## Generate a library
-
-Run `nx g @nrwl/react:lib my-lib` to generate a library.
-
-> You can also use any of the plugins above to generate libraries as well.
-
-Libraries are shareable across libraries and applications. They can be imported from `@canvas-games/mylib`.
-
-## Development server
-
-Run `nx serve my-app` for a dev server. Navigate to http://localhost:4200/. The app will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `nx g @nrwl/react:component my-component --project=my-app` to generate a new component.
-
-## Build
-
-Run `nx build my-app` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `nx test my-app` to execute the unit tests via [Jest](https://jestjs.io).
-
-Run `nx affected:test` to execute the unit tests affected by a change.
-
-## Running end-to-end tests
-
-Run `nx e2e my-app` to execute the end-to-end tests via [Cypress](https://www.cypress.io).
-
-Run `nx affected:e2e` to execute the end-to-end tests affected by a change.
-
-## Understand your workspace
-
-Run `nx graph` to see a diagram of the dependencies of your projects.
-
-## Further help
-
-Visit the [Nx Documentation](https://nx.dev) to learn more.
-
-
-
-## ☁ Nx Cloud
-
-### Distributed Computation Caching & Distributed Task Execution
-
-<p style="text-align: center;"><img src="https://raw.githubusercontent.com/nrwl/nx/master/images/nx-cloud-card.png"></p>
-
-Nx Cloud pairs with Nx in order to enable you to build and test code more rapidly, by up to 10 times. Even teams that are new to Nx can connect to Nx Cloud and start saving time instantly.
-
-Teams using Nx gain the advantage of building full-stack applications with their preferred framework alongside Nx’s advanced code generation and project dependency graph, plus a unified experience for both frontend and backend developers.
-
-Visit [Nx Cloud](https://nx.app/) to learn more.
+- Best practices for structuring and organizing your code in a monorepo
+- Strategies for sharing common code and resources across multiple projects
+- How to leverage Next.js to build fast, responsive web applications
+- Techniques for optimizing your games for performance and scalability
+- How to work on a large-scale project
