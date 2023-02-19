@@ -12,6 +12,10 @@ const nextConfig = {
     // See: https://github.com/gregberge/svgr
     svgr: false,
   },
+  compiler: {
+    // ssr and displayName are configured by default
+    styledComponents: true,
+  },
 };
 
 module.exports = withNx(nextConfig);
