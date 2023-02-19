@@ -1,7 +1,7 @@
 {
-  "name": "snake-game",
+  "name": "canvas-games",
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
-  "sourceRoot": "apps/snake-game",
+  "sourceRoot": "apps/canvas-games",
   "projectType": "application",
   "targets": {
     "build": {
@@ -9,12 +9,12 @@
       "outputs": ["{options.outputPath}"],
       "defaultConfiguration": "production",
       "options": {
-        "root": "apps/snake-game",
-        "outputPath": "dist/apps/snake-game"
+        "root": "apps/canvas-games",
+        "outputPath": "dist/apps/canvas-games"
       },
       "configurations": {
         "development": {
-          "outputPath": "apps/snake-game"
+          "outputPath": "apps/canvas-games"
         },
         "production": {}
       }
@@ -23,17 +23,17 @@
       "executor": "@nrwl/next:server",
       "defaultConfiguration": "development",
       "options": {
-        "buildTarget": "snake-game:build",
+        "buildTarget": "canvas-games:build",
         "dev": true,
         "port": 3000
       },
       "configurations": {
         "development": {
-          "buildTarget": "snake-game:build:development",
+          "buildTarget": "canvas-games:build:development",
           "dev": true
         },
         "production": {
-          "buildTarget": "snake-game:build:production",
+          "buildTarget": "canvas-games:build:production",
           "dev": false
         }
       }
@@ -41,14 +41,14 @@
     "export": {
       "executor": "@nrwl/next:export",
       "options": {
-        "buildTarget": "snake-game:build:production"
+        "buildTarget": "canvas-games:build:production"
       }
     },
     "test": {
       "executor": "@nrwl/jest:jest",
-      "outputs": ["coverage/apps/snake-game"],
+      "outputs": ["coverage/apps/canvas-games"],
       "options": {
-        "jestConfig": "apps/snake-game/jest.config.ts",
+        "jestConfig": "apps/canvas-games/jest.config.ts",
         "passWithNoTests": true
       }
     },
@@ -56,7 +56,7 @@
       "executor": "@nrwl/linter:eslint",
       "outputs": ["{options.outputFile}"],
       "options": {
-        "lintFilePatterns": ["apps/snake-game/**/*.{ts,tsx,js,jsx}"]
+        "lintFilePatterns": ["apps/canvas-games/**/*.{ts,tsx,js,jsx}"]
       }
     }
   },

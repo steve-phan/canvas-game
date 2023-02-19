@@ -1,19 +1,19 @@
 {
-  "name": "snake-game-e2e",
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
-  "sourceRoot": "apps/snake-game-e2e/src",
+  "name": "canvas-games-e2e",
+  "sourceRoot": "apps/canvas-games-e2e/src",
   "projectType": "application",
   "targets": {
     "e2e": {
       "executor": "@nrwl/cypress:cypress",
       "options": {
-        "cypressConfig": "apps/snake-game-e2e/cypress.config.ts",
-        "devServerTarget": "snake-game:serve:development",
+        "cypressConfig": "apps/canvas-games-e2e/cypress.config.ts",
+        "devServerTarget": "canvas-games:serve:development",
         "testingType": "e2e"
       },
       "configurations": {
         "production": {
-          "devServerTarget": "snake-game:serve:production"
+          "devServerTarget": "canvas-games:serve:production"
         }
       }
     },
@@ -21,10 +21,10 @@
       "executor": "@nrwl/linter:eslint",
       "outputs": ["{options.outputFile}"],
       "options": {
-        "lintFilePatterns": ["apps/snake-game-e2e/**/*.{js,ts}"]
+        "lintFilePatterns": ["apps/canvas-games-e2e/**/*.{js,ts}"]
       }
     }
   },
   "tags": [],
-  "implicitDependencies": ["snake-game"]
+  "implicitDependencies": ["canvas-games"]
 }
