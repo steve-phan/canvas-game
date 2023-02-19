@@ -1,5 +1,5 @@
+import { CANVAS_HEIGHT, CANVAS_WIDTH } from '@canvas-games/canvas';
 import { clearBoard, drawObject, generateRandomPosition } from './utils';
-import { CANVAS_WIDTH, CANVAS_HEIGHT } from './canvas.config';
 
 describe('clearBoard', () => {
   test('should clear the canvas', () => {

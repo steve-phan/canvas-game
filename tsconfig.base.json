@@ -15,7 +15,10 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@canvas-games/canvas": ["libs/canvas/src/index.ts"]
+      "@canvas-games/canvas": ["libs/canvas/src/index.ts"],
+      "@canvas-games/shared/util-position": [
+        "libs/shared/util-position/src/index.ts"
+      ]
     }
   },
   "exclude": ["node_modules", "tmp"]

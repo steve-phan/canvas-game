@@ -8,6 +8,7 @@ export default {
       { jsc: { transform: { react: { runtime: 'automatic' } } } },
     ],
   },
+  setupFiles: ['jest-canvas-mock'],
   moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx'],
   coverageDirectory: '../../coverage/libs/canvas',
 };

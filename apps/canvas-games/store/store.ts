@@ -1,7 +1,11 @@
 import { configureStore, ThunkAction, Action } from '@reduxjs/toolkit';
 
+import snakeGameSlice from './snakeGame/snakeGameSlice';
+
 export const store = configureStore({
-  reducer: {},
+  reducer: {
+    snakeGame: snakeGameSlice,
+  },
 });
 
 export type AppState = ReturnType<typeof store.getState>;

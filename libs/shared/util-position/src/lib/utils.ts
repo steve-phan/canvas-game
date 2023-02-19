@@ -1,4 +1,4 @@
-import { CANVAS_HEIGHT, CANVAS_WIDTH } from './canvas.config';
+import { CANVAS_HEIGHT, CANVAS_WIDTH } from '@canvas-games/canvas';
 
 export const clearBoard = (
   context: CanvasRenderingContext2D | null,
@@ -18,7 +18,7 @@ export const drawObject = (
   context: CanvasRenderingContext2D | null,
   objectBody: IObjectBody[],
   fillColor: string,
-  strokeStyle = 'deeppink'
+  strokeStyle = 'black'
 ) => {
   if (!context) {
     return;
