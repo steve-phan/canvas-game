@@ -3,6 +3,7 @@ import styled from 'styled-components';
 
 import { CanvasBoard } from '@canvas-games/canvas';
 import {
+  clearBoard,
   drawObject,
   generateRandomPosition,
   IObjectBody,
@@ -10,6 +11,7 @@ import {
 
 import { useAppDispatch, useAppSelector } from '../../store/hooks';
 import {
+  moveSnake,
   setDirection,
   snakeDirections,
 } from '../../store/snakeGame/snakeGameSlice';
@@ -34,7 +36,6 @@ export const SnakeGame = ({ width, height }: SnakeGameProps) => {
     generateRandomPosition(width - 20, height - 20)
   );
   const handleKeyDown = async (event: KeyboardEvent) => {
-    console.log({ event });
     switch (event.code) {
       case 'KeyW':
         dispatch(setDirection(snakeDirections.UP));
@@ -51,8 +52,9 @@ export const SnakeGame = ({ width, height }: SnakeGameProps) => {
       default:
         break;
     }
+    dispatch(moveSnake());
   };
-
+  console.log({ snake });
   useEffect(() => {
     window.addEventListener('keydown', handleKeyDown);
     return () => {
@@ -61,13 +63,12 @@ export const SnakeGame = ({ width, height }: SnakeGameProps) => {
   }, []);
 
   useEffect(() => {
+    setContext(canvasRef.current && canvasRef.current.getContext('2d'));
+    clearBoard(context);
     drawObject(context, [targetPos], 'deepink'); //Draws target randomly
     drawObject(context, snake, 'red'); // Draws initial snake
-  }, [context]);
+  }, [targetPos, context, snake]);
 
-  useEffect(() => {
-    setContext(canvasRef.current && canvasRef.current.getContext('2d'));
-  }, []);
   return (
     <StyledSnakeGame>
       <h1>Welcome to SnakeGame!</h1>
